@@ -48,3 +48,11 @@ $ cd serratec-projeto-final
 $ yarn install
 $ yarn start
 ```
+
+ <p align="center">
+desenvolvido por • <a href="https://www.linkedin.com/in/isabelsantana2811/">Isabel Sant' Ana</a> •
+<a href="https://www.linkedin.com/in/rosana-dantas-a1706910b/">Rosana Dantas</a> •
+<a href="https://www.linkedin.com/in/vin%C3%ADcius-soares-43238b144/">Vinicius Soares</a> •
+<a href="https://www.linkedin.com/in/gabriel-theophilo-32053a110/">Gabriel Theophilo</a> •
+  <a href="https://github.com/Charllesryam">Charlles Ryam</a> •
+</p>
