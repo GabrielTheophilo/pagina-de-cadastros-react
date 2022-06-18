@@ -1,4 +1,4 @@
-<h1 align="center"> 🛠 Projeto final da disciplina de Desenvolvimento Web - React</h1>
+<h1 align="center"> 🛠 Projeto final da disciplina de Desenvolvimento Web - React -</h1>
 
 <p align="center">
   <a href="">
