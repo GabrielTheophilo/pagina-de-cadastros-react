@@ -1,14 +1,17 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Styles from "../../components/Styles";
 import { API_URL_ALUNOS } from "../../constants";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { useParams } from "react-router";
+import { AlunosContext } from "../../context";
 
 const CadastrarAlunos = () => {
   const { id } = useParams();
   const MySwal = withReactContent(Swal);
+
+  const { alunos, setAlunos } = useContext(AlunosContext);
 
   const valorInicial = id ? "" : null;
   const [nome, setNome] = useState(valorInicial);
@@ -16,7 +19,16 @@ const CadastrarAlunos = () => {
   const [cidade, setCidade] = useState(valorInicial);
 
   useEffect(() => {
-    getAlunos();
+    if (alunos.length > 0) {
+      const alunoSelecionado = alunos.find((aluno) => {
+        return aluno.id == id;
+      });
+      setNome(alunoSelecionado.nome);
+      setIdade(alunoSelecionado.idade);
+      setCidade(alunoSelecionado.cidade);
+    } else {
+      getAlunos();
+    }
   }, []);
 
   const getAlunos = () => {
